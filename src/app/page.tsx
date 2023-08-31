@@ -1,12 +1,11 @@
-import { SampleDatePicker } from "@/components/sample-date-picker"
-import { Button } from "@/components/ui/button"
+import CodeDetector from "@/components/CodeDetector"
+import TodolList from "./_components/TodolList"
 
 export default function Home() {
   return (
     <main className="p-4">
-      <button className="btn btn-primary">Button</button>
-      <Button>Button</Button>
-      <SampleDatePicker />
+      <CodeDetector />
+      <TodolList />
     </main>
   )
 }

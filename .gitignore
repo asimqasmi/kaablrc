@@ -15,6 +15,7 @@
 # production
 /build
 /data
+/src/lib
 /drizzle
 docker-compose.yml
 
