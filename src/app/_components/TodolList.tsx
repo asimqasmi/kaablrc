@@ -5,13 +5,13 @@ import { trpc } from "../_trpc/client"
 
 const TodolList = () => {
   const [content, setContent] = useState("")
-  const getTodos = trpc.getTodos.useQuery()
+  const getUsers = trpc.getUsers.useQuery()
 
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     inputRef.current?.focus()
-  }, [getTodos.data])
+  }, [getUsers.data])
 
   return (
     <div>

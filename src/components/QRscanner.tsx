@@ -25,7 +25,7 @@ const QRscanner = () => {
 
     function success(result: string) {
       scanner.clear()
-      setScanResult(result)
+      // setScanResult(result)
     }
     function error(error: any) {
       console.warn(error)

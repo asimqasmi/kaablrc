@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "studio": "npx drizzle-kit studio --config=./src/db/drizzle.config.ts",
-    "db:seed": "tsx ./src/db/seed.ts",
+    "studio": "npx drizzle-kit studio --config=./drizzle.config.ts",
+    "db:seed": "tsx ./src/lib/db/seed.ts",
     "migration:generate": "drizzle-kit generate:pg --config=./drizzle.config.ts",
-    "migration:push": "node -r esbuild-register src/lib/db/migrate.ts",
+    "migration:push": "node -r esbuild-register ./src/lib/db/migrate.ts",
     "migrate": "drizzle-kit generate:pg --config=./drizzle.config.ts && node -r esbuild-register src/lib/db/migrate.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@hookform/resolvers": "^3.2.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.4",

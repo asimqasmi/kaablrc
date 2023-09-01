@@ -1,11 +1,11 @@
-import { db } from "@/lib/db"
-import { publicProcedure, router } from "./trpc"
-import { users } from "@/lib/db/schema"
+import { router } from "./trpc"
+import { getUsers, addUser, updateUser } from "./routes/users"
 
 export const appRouter = router({
-  getTodos: publicProcedure.query(async () => {
-    return (await db.select().from(users)).sort((a, b) => b.id - a.id)
-  }),
+  // users
+  getUsers,
+  addUser,
+  updateUser,
 })
 
 export type AppRouter = typeof appRouter
